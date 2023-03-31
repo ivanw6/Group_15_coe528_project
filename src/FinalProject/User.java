@@ -22,7 +22,30 @@ public class User {
         this.points = points;
     }
     
- 
-            
+    public void login()
+    {
+    }
+    
+    public void logout()
+    {
+    }
+    
+    public boolean verification(String username, String password) {
+        if (this.username.equals(username) && this.password.equals(password)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public String loginError(String username, String password) {
+        if (!this.username.equals(username)) {
+            return "Username is incorrect.";
+        } else if (!this.password.equals(password)) {
+            return "Password is incorrect.";
+        } else {
+            return "Error. Retry the program.";
+        }
+    }            
     
 }
